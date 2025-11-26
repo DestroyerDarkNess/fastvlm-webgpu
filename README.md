@@ -62,8 +62,9 @@ Or click suggestion chips for quick prompts.
 ## Project Structure
 
 ```
-V2/
+fastvlm-webgpu/
 ├── index.html              # Entry point
+├── favicon.ico             # Favicon
 ├── styles/
 │   ├── main.css           # Base styles
 │   └── components.css     # Component styles
