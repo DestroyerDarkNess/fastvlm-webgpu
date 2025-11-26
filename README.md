@@ -2,6 +2,10 @@
 
 Real-time video captioning powered by FastVLM-0.5B AI model, built with vanilla JavaScript (no frameworks!).
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
 ## Quick Start
 
 ### Prerequisites
