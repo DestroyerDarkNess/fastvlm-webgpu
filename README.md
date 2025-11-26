@@ -2,7 +2,7 @@
 
 Real-time video captioning powered by FastVLM-0.5B AI model, built with vanilla JavaScript (no frameworks!).
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - WebGPU-enabled browser (Chrome 113+ or Edge 113+)
@@ -32,17 +32,17 @@ Real-time video captioning powered by FastVLM-0.5B AI model, built with vanilla 
 
 6. **Start captioning!** The AI will describe what it sees in real-time
 
-## ✨ Features
+## Features
 
-- 🎥 **Real-time video captioning** using AI
-- 🧠 **Runs entirely in browser** - no server needed, works offline
-- ⚡ **WebGPU acceleration** for fast inference
-- 🎨 **Modern glass morphism UI**
-- 🖱️ **Draggable interface elements**
-- 💬 **Custom prompts** - ask the AI anything about the video
-- 🎯 **Zero dependencies** - pure vanilla JavaScript
+- **Real-time video captioning** using AI
+- **Runs entirely in browser** - no server needed, works offline
+- **WebGPU acceleration** for fast inference
+- **Modern glass morphism UI**
+- **Draggable interface elements**
+- **Custom prompts** - ask the AI anything about the video
+- **Zero dependencies** - pure vanilla JavaScript
 
-## 🎮 How to Use
+## How to Use
 
 ### Customize Prompts
 Use the prompt input (bottom-left) to ask specific questions:
@@ -57,7 +57,7 @@ Or click suggestion chips for quick prompts.
 - **Drag containers** - Move prompt input and caption display anywhere
 - **Suggestion chips** - Quick prompt selection
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 V2/
@@ -78,15 +78,15 @@ V2/
 |---------|---------|-------|
 | Chrome 113+ | ✅ | Full support |
 | Edge 113+ | ✅ | Full support |
-| Firefox | ❌ | WebGPU in development |
-| Safari | ⚠️ | WebGPU experimental |
+| Firefox 141+ | ✅ | Full support |
+| Safari 26 Beta | ⚠️ | WebGPU experimental |
 
-## 📦 Dependencies
+## Dependencies
 
 All loaded via CDN (no npm install needed!):
 - **@huggingface/transformers** - AI model inference
 
-## 🔧 Technical Details
+## Technical Details
 
 - **Model:** FastVLM-0.5B-ONNX (quantized for browser)
 - **Framework:** Vanilla JavaScript (ES6 modules)
@@ -94,12 +94,8 @@ All loaded via CDN (no npm install needed!):
 - **Acceleration:** WebGPU
 - **Architecture:** Event-driven component system
 
-## 📝 License
-
-Same as the original project.
-
-## 🙏 Credits
+## Credits
 
 - Built on [Hugging Face Transformers.js](https://huggingface.co/docs/transformers.js)
 - Uses [FastVLM-0.5B-ONNX](https://huggingface.co/onnx-community/FastVLM-0.5B-ONNX) model
-- Rewritten in vanilla JS from React version
+- Rewritten in vanilla JS from [React version](huggingface.co/spaces/apple/fastvlm-webgpu)
