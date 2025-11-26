@@ -2,14 +2,12 @@
 
 Real-time video captioning powered by FastVLM-0.5B AI model, built with vanilla JavaScript (no frameworks!).
 
-![alt text](image.png)
-
-![alt text](image-1.png)
+<img src="image.png" alt="meme 1" width="100" height="100"> <img src="image-1.png" alt="meme 2" width="100" height="100">
 
 ## Quick Start
 
 ### Prerequisites
-- WebGPU-enabled browser (Chrome 113+ or Edge 113+)
+- WebGPU-enabled browser
 - Camera/webcam
 
 ### Run Locally
