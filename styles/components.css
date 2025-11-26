@@ -1,0 +1,327 @@
+/* ===========================
+   Glass Container
+   =========================== */
+
+.glass-container {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.glass-success {
+    background: rgba(0, 50, 0, 0.25);
+}
+
+.glass-error {
+    background: rgba(50, 0, 0, 0.25);
+}
+
+/* ===========================
+   Glass Button
+   =========================== */
+
+.glass-button {
+    background: rgba(59, 130, 246, 0.25);
+    backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.glass-button:hover {
+    background: rgba(59, 130, 246, 0.35);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.glass-button:active {
+    transform: scale(0.95);
+}
+
+/* ===========================
+   Draggable Container
+   =========================== */
+
+.draggable-container {
+    position: absolute;
+    cursor: move;
+    user-select: none;
+    z-index: 10;
+}
+
+.draggable-container.dragging {
+    cursor: grabbing;
+    z-index: 20;
+}
+
+/* ===========================
+   Webcam Capture Controls
+   =========================== */
+
+.webcam-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.webcam-toggle-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.webcam-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.webcam-toggle-btn.paused {
+    background: rgba(239, 68, 68, 0.5);
+}
+
+.webcam-status {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: #d1d5db;
+}
+
+.webcam-status.error {
+    background: rgba(239, 68, 68, 0.5);
+    color: #fca5a5;
+}
+
+/* ===========================
+   Prompt Input
+   =========================== */
+
+.prompt-input-container {
+    width: 420px;
+    max-width: 90vw;
+}
+
+.prompt-textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+    color: white;
+    font-size: 0.875rem;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.prompt-textarea:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.prompt-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.prompt-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.prompt-suggestion-chip {
+    padding: 6px 12px;
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: #93c5fd;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.prompt-suggestion-chip:hover {
+    background: rgba(59, 130, 246, 0.3);
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Live Caption
+   =========================== */
+
+.live-caption-container {
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.live-caption-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f3f4f6;
+    word-wrap: break-word;
+}
+
+.live-caption-streaming {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.live-caption-error {
+    color: #fca5a5;
+}
+
+/* ===========================
+   Progress Bar
+   =========================== */
+
+.progress-bar-container {
+    width: 100%;
+    background: rgba(31, 41, 55, 0.5);
+    border-radius: 9999px;
+    height: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    border-radius: 9999px;
+    transition: width 0.3s ease-out;
+}
+
+/* ===========================
+   Loading Spinner
+   =========================== */
+
+.loading-spinner {
+    width: 64px;
+    height: 64px;
+    border: 4px solid #3b82f6;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* ===========================
+   Error Icon
+   =========================== */
+
+.error-icon-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-icon {
+    width: 32px;
+    height: 32px;
+    color: #f87171;
+}
+
+/* ===========================
+   Status Indicator
+   =========================== */
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4ade80;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ===========================
+   Numbered Badge
+   =========================== */
+
+.numbered-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   Icon Inline
+   =========================== */
+
+.icon-inline {
+    display: inline-flex;
+    width: 1.75rem;
+    height: 1.75rem;
+    pointer-events: none;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 768px) {
+    .prompt-input-container {
+        width: 90vw;
+    }
+
+    .live-caption-container {
+        min-width: auto;
+        max-width: 90vw;
+    }
+
+    .draggable-container {
+        position: static !important;
+        margin: 20px;
+    }
+}
