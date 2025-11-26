@@ -72,7 +72,7 @@ V2/
     └── components/        # UI components
 ```
 
-## 🌐 Browser Support
+## Browser Support
 
 | Browser | Support | Notes |
 |---------|---------|-------|
